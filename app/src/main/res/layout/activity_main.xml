@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="sandeep.com.textrecognition.MainActivity">
+
+
+    <ImageButton
+        android:id="@+id/imbCapture"
+        android:layout_width="50dip"
+        android:layout_height="50dip"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="12dp"
+        android:scaleType="fitXY"
+        app:srcCompat="@mipmap/ic_camera_alt" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/viewDivider"
+        android:layout_below="@+id/imbCapture"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="12dip"
+        android:layout_marginTop="12dip"
+        android:scaleType="fitXY"
+        app:srcCompat="@android:color/background_light" />
+
+    <RelativeLayout
+        android:id="@+id/viewDivider"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="16dp"
+            android:layout_toStartOf="@id/tvHorizontalText"
+            android:background="@color/colorPrimary" />
+
+        <TextView
+            android:id="@+id/tvHorizontalText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:text=""
+            android:textColor="@color/colorPrimary" />
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="16dp"
+            android:layout_toEndOf="@id/tvHorizontalText"
+            android:background="#FF0000" />
+
+    </RelativeLayout>
+
+</RelativeLayout>
